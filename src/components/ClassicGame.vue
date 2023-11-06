@@ -2,7 +2,6 @@
 import Board from './Board.vue';
 import Mask from './Mask.vue';
 import { blur } from '../utils/button';
-import { use2048 } from '../utils/2048';
 import { ElMessage } from 'element-plus'
 import axios from 'axios';
 import { useuserStore } from '../stores/userstore'
@@ -10,6 +9,7 @@ import { useClassicalGameStore } from '../stores/classicGame';
 import { computed } from 'vue';
 import { onKeyStroke, useTransition } from '@vueuse/core';
 import navigation from '../components-view/Navigation.vue';
+import end from '../components-view/end.vue'
 const emit = defineEmits<{
     (e: 'up'): void
     (e: 'down'): void
@@ -137,6 +137,7 @@ onKeyStroke(['ArrowRight', 'd'], () => {
 
         <Board :board="game.local.board" :score="game.local.score" style="bottom: 0px;"></Board>
     </div>
+    <end></end>
 </template>
 
 <style lang="scss" scoped>

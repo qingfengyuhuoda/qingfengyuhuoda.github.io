@@ -1,10 +1,20 @@
 import { defineStore } from 'pinia'
-import { computed, readonly, ref } from "vue"
+import { ref } from "vue"
 // import { CountdownTimer } from "../utils/CountdownTimer"
 import { useLocalStorage } from '@vueuse/core';
 export const useuserStore = defineStore('userstore', () => {
 
-    const info =useLocalStorage('info',{}) 
+    const info =useLocalStorage('info',{
+        username:'',
+        password:'',
+        touxiang:'',
+        achieve1:'',
+        achieve2:'',
+        achieve3:'',
+        achieve4:'',
+        score:0,
+
+    }) 
     const isAuthenticated = ref(false)
 
     const setInfo = (newInfo) => {
@@ -13,7 +23,16 @@ export const useuserStore = defineStore('userstore', () => {
 
 
     const removeInfo = () => {
-        info.value = {}
+        info.value = {
+            username:'',
+            password:'',
+            touxiang:'',
+            achieve1:'',
+            achieve2:'',
+            achieve3:'',
+            achieve4:'',
+            score:0,
+        }
     }
 
     const setIsAuthenticated = (value) => {
@@ -24,4 +43,4 @@ export const useuserStore = defineStore('userstore', () => {
         isAuthenticated,
         setIsAuthenticated
     }
-}, { persist: true })
+})

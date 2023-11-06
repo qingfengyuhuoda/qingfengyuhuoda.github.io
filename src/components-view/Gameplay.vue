@@ -890,7 +890,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(/src/assets/images/banner-bg.jpg);
+  background-image: url(/src/assets/images/2048Tiles.png);
   background-position: center center;
   background-size: cover;
   min-height: 380px;
@@ -900,7 +900,7 @@ Banner Style
 
 .main-banner h6 {
   font-size: 20px;
-  color: #fff;
+  color: black;
   font-weight: 400;
   margin-bottom: 25px;
 }
@@ -909,6 +909,7 @@ Banner Style
   font-size: 45px;
   text-transform: uppercase;
   margin-bottom: 25px;
+  color: rgb(10, 10, 10);
 }
 
 .main-banner h4 em {

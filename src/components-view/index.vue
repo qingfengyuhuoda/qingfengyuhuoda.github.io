@@ -2,7 +2,7 @@
 import navigation from './Navigation.vue';
 // import Login from './Login.vue';
 // import LoginSuccess from './LoginSuccess.vue';
-import Gameplay from './Gameplay.vue'
+import Gameplay from './Gameplay.vue';
 // import PlayerChart from './PlayerChart.vue'
 // import Detail from './Detail.vue'
 // import AchievementPlayer from './AchievementPlayer.vue'
@@ -16,6 +16,7 @@ import end from './end.vue'
         <Gameplay></Gameplay>
         <!-- <Advertisement></Advertisement> -->
         <Achievement></Achievement>
+        <!-- <quit></quit> -->
         <end></end>
         <!-- </div> -->
 </template>

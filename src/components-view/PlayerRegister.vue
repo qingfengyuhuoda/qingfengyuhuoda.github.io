@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import { ElMessage } from 'element-plus'
 import { useuserStore } from '../stores/userstore'
 import axios from 'axios';
+import { User, Lock } from '@element-plus/icons-vue'
 import {useRouter} from 'vue-router'
 import { useClassicalGameStore } from '../stores/classicGame';
 const game=useClassicalGameStore()
@@ -16,14 +17,21 @@ const user = ref({
     confirmPass: '',
     score: 0
 });
-
-const validatePassword = (rule, confirmPass, callback) => {
-    if (confirmPass === '') {
+// const clearRegisterData = ()=>{
+//     user.value={
+//         username:'',
+//         password:'',
+//         confirmPass:'',
+//         score: 0
+//     }
+// }
+const validatePassword = (rule,value,callback) => {
+    if (value === '') {
         callback(new Error('请确认密码'))
-    } else if (confirmPass !== user.value.password) {
+    } else if (value !== user.value.password) {
         callback(new Error('两次输入的密码不一致'))
     } else {
-        console.log(confirmPass)
+        console.log(value)
         console.log(user.value.password)
         callback()
     }
@@ -51,7 +59,6 @@ const register = () => {
     // 验证通过
     axios.post('http://localhost:9090/register', userData)
         .then(res => {
-            console.log(userData.value)
             if (res.data.code === '200') {
                 // router.push('/wcregister')
                 // isRegister = true
@@ -95,9 +102,6 @@ const login = () => {
 };
 
 
-const goToLogin = () => {
-    router.push('/login');
-};
 </script>
   
 <template>
@@ -119,8 +123,8 @@ const goToLogin = () => {
                     <el-input :prefix-icon="Lock" type="password" show-password placeholder="请输入密码"
                         v-model="user.password"></el-input>
                 </el-form-item>
-                <el-form-item prop="rePassword">
-                    <el-input :prefix-icon="Lock" type="password" show-password placeholder="请输入再次密码"
+                <el-form-item prop="confirmPass">
+                    <el-input :prefix-icon="Lock" type="password" show-password placeholder="请再次输入密码"
                         v-model="user.confirmPass"></el-input>
                 </el-form-item>
                 <!-- 注册按钮 -->
@@ -130,13 +134,13 @@ const goToLogin = () => {
                     </el-button>
                 </el-form-item>
                 <el-form-item class="flex">
-                    <el-link type="info" :underline="false" @click="isRegister = false; clearRegisterData()">
+                    <el-link type="info" :underline="false" @click="isRegister = false;">
                         ← 返回
                     </el-link>
                 </el-form-item>
             </el-form>
             <!-- 登录表单 -->
-            <el-form ref="form" size="large" autocomplete="off" v-else :model="registerData" :rules="rules">
+            <el-form ref="form" size="large" autocomplete="off" v-else :model="user" :rules="rules">
                 <el-form-item>
                     <h1>登录</h1>
                 </el-form-item>
@@ -158,7 +162,7 @@ const goToLogin = () => {
                     <el-button class="button" type="primary" auto-insert-space @click="login">登录</el-button>
                 </el-form-item>
                 <el-form-item class="flex">
-                    <el-link type="info" :underline="false" @click="isRegister = true; clearRegisterData()">
+                    <el-link type="info" :underline="false" @click="isRegister = true">
                         注册 →
                     </el-link>
                 </el-form-item>

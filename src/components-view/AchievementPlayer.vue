@@ -9,6 +9,7 @@ const authStore = useuserStore()
     <div class="col-lg-12">
         <div class="heading-section">
         <h4><em>Your Achievement</em> Library</h4>
+        <h4><em></em> 成就列表</h4>
         </div>
         <div class="item">
             <ul>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 //import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
-  import {articleGetAllService,articleSearchService} from '@/api/article.js';
   import navigation from './Navigation.vue';
     import {ref} from 'vue';
+    import end from './end.vue'
     import axios from 'axios';
     //定义响应式数据  ref
     const articleList = ref(
@@ -121,6 +121,7 @@
       </ul>
     </div>
   </div>
+  <end></end>
 </template>
 <style lang ="scss" scoped>
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
