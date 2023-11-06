@@ -6,6 +6,7 @@ import RemoteGame from './RemoteGame.vue'
 import inbgm from '../music/Inbgm.mp3'
 import bgm from '../music/Zander Noriega - School of Quirks.mp3'
 import { ref, watch } from 'vue';
+import prop_column from './prop_column.vue';
 import end from '../components-view/end.vue'
 const game = useGameStore()
 
@@ -39,6 +40,7 @@ watch(()=>game.isRemotePlayerConnected,()=>{
 
 <template>
     <navigation></navigation>
+    <prop_column></prop_column>
 <div @click="playMusic">
         <button v-if="!game.isRemotePlayerConnected" class="custom-button" @click="game.openMultiplayerGame">{{ '开始匹配' }}</button>
 
@@ -51,7 +53,7 @@ watch(()=>game.isRemotePlayerConnected,()=>{
             </div>
         </div>
     </div>
-    <end></end>
+    
 </template>
 
 <style lang="scss" scoped>
@@ -61,6 +63,7 @@ watch(()=>game.isRemotePlayerConnected,()=>{
     width: 1400px;
     height: 650px;
     position: relative;
+    background-color: #1f2122;
 }
 
 .localGameContainer {
