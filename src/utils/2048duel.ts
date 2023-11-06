@@ -30,7 +30,7 @@ export function use2048Duel() {
 
     const seed = ref(Math.random());
     let rand = createRandom(seed.value);
-    const prop_num=ref([2,2,2,5]);
+    const prop_num=ref([2,2,2,5,3]);
     const damage = ref(0);
     const score = ref(0);
     const hp = ref(MAX_HP);
@@ -122,7 +122,7 @@ export function use2048Duel() {
         isStuck.value = false;
         hasWon.value = false;
         count_frozen.value = 3;
-        prop_num.value=[2,2,2,5]
+        prop_num.value=[2,2,2,5,3]
 
         if (_seed) {
             seed.value = _seed;

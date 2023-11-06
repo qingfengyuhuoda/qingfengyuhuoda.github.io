@@ -190,7 +190,7 @@ onKeyStroke('4', () => {
 
 
 onKeyStroke('f', () => {
-
+    
     game.remoteGame.board = game.remoteGame.setRandomTile(game.remoteGame.board, 'frozen')
 
 })
