@@ -52,6 +52,11 @@ const routes: Array<RouteRecordRaw> = [{
     path: '/Navigation',
     component: () => import('../components-view/Navigation.vue')
 
+}
+, {
+    path: '/prop',
+    component: () => import('../components/prop_column.vue')
+
 }]
 
 const router = createRouter({
