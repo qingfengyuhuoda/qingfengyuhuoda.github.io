@@ -150,7 +150,7 @@
   content: "\25b6"; }
 .rowoutside{
   display: flex;
-  margin-top: 55px;
+  margin-top: 90px;
   padding: 30px;
 }
 .rowoutside>* {

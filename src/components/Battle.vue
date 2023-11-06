@@ -6,7 +6,6 @@ import RemoteGame from './RemoteGame.vue'
 import inbgm from '../music/Inbgm.mp3'
 import bgm from '../music/Zander Noriega - School of Quirks.mp3'
 import { ref, watch } from 'vue';
-import end from '../components-view/end.vue'
 const game = useGameStore()
 
 const params = new URLSearchParams(window.location.search)
@@ -51,7 +50,6 @@ watch(()=>game.isRemotePlayerConnected,()=>{
             </div>
         </div>
     </div>
-    <end></end>
 </template>
 
 <style lang="scss" scoped>

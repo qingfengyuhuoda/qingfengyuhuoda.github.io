@@ -144,7 +144,7 @@ onKeyStroke(['ArrowRight', 'd'], () => {
 .container-game {
     width: 592px;
     height: 708px;
-    margin: 100px auto;
+    margin: 140px auto;
     position: relative;
 }
 

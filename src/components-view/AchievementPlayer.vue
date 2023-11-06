@@ -901,7 +901,8 @@ Gaming Library Style
 */
 
 .gaming-library {
-  margin-top: 160px;
+  
+  margin-top: 140px;
   padding: 30px;
   background-color: #1f2122;
   border-radius: 23px;

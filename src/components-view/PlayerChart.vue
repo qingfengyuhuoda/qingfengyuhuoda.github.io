@@ -1561,7 +1561,7 @@ Top Streamers Style
 */
 
 .top-streamers {
-  
+   margin-top: 140px;
   border-radius: 23px;
   background-color: #1f2122;
   padding: 30px;
