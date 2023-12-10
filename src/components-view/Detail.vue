@@ -3,6 +3,7 @@
 
 </script>
 
+
 <template>
   <div class="rowoutside">
     <div class="col-lg-12">

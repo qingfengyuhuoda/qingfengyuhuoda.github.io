@@ -27,6 +27,7 @@ import end from './end.vue'
         margin: 0px;
 }
 
+
 html,
 body,
 #app {

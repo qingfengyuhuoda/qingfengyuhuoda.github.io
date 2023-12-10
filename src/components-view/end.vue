@@ -30,6 +30,7 @@ figure, header, nav, section, article, aside, footer, figcaption {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .col-lg-12{
   margin-bottom: 100px;
 }
