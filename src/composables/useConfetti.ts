@@ -8,6 +8,7 @@ export interface useFireworksOptions {
     zIndex?: number
 }
 
+
 export function useFireworks(options: useFireworksOptions = {}) {
     const {
         duration = 8 * 1000,
