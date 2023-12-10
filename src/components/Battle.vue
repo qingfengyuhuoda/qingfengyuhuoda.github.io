@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useGameStore } from '../stores/game'
-import LocalGame from './LocalGame.vue';
+// import LocalGame from './LocalGame.vue';
+import LocalGame_2 from './LocalGame_2.vue';
 import navigation from '../components-view/Navigation.vue';
 import RemoteGame from './RemoteGame.vue'
 import inbgm from '../music/Inbgm.mp3'
@@ -39,18 +40,21 @@ watch(()=>game.isRemotePlayerConnected,()=>{
 
 <template>
     <navigation></navigation>
+
     <prop_column></prop_column>
+    <div class="page-content">
 <div @click="playMusic">
         <button v-if="!game.isRemotePlayerConnected" class="custom-button" @click="game.openMultiplayerGame">{{ '开始匹配' }}</button>
 
         <div class="containerGame">
             <div class="localGameContainer">
-                <LocalGame />
+                <LocalGame_2 />
             </div>
             <div class="remoteGameContainer">
                 <RemoteGame />
             </div>
         </div>
+    </div>
     </div>
     
 </template>
@@ -59,10 +63,10 @@ watch(()=>game.isRemotePlayerConnected,()=>{
 
 
 .containerGame {
-    width: 1400px;
-    height: 650px;
+    width: 87.5rem;
+    height: 40.625rem;
     position: relative;
-    background-color: #1f2122;
+    // background-color: #1f2122;
 }
 
 .localGameContainer {
@@ -78,7 +82,7 @@ watch(()=>game.isRemotePlayerConnected,()=>{
 
 .custom-button {
   
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #ec6090;
   background-color: transparent;
   border: 1px solid #ec6090;
@@ -97,6 +101,17 @@ watch(()=>game.isRemotePlayerConnected,()=>{
   border-color: #fff;
   background-color: #fff;
   color: #e75e8d;
+}
+
+.page-content {
+    position: absolute;
+  top:33.75rem;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  background-color: #27292a;
+  padding: 60px;
+  width: 1300px; /* 适当的宽度，可以根据需要调整 */
+  border-radius: 23px;
 }
 
 </style>

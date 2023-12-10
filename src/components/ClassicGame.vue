@@ -35,7 +35,7 @@ const submit = () => {
     // $refs.registerRef.value.validate(valid) => {
     //     if (valid) {
     // 验证通过
-    axios.put('http://localhost:9090/user/update', userData)
+    axios.put('http://101.200.36.91:9090/user/update', userData)
         .then(res => {          
             console.log(userData.score)
             if (res.data.code === '200') {
@@ -142,26 +142,26 @@ onKeyStroke(['ArrowRight', 'd'], () => {
 
 <style lang="scss" scoped>
 .container-game {
-    width: 592px;
-    height: 708px;
-    margin: 140px auto;
+    width: 37rem;
+    height: 44.25rem;
+    margin: 8.75rem auto;
     position: relative;
 }
 
 .container-header {
-    width: 592px;
-    height: 100px;
-    margin-bottom: 16px;
+    width: 37rem;
+    height: 6.25rem;
+    margin-bottom: 1rem;
     position: relative;
 }
 
 .score1 {
     font-family: 'consolas';
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: bold;
     text-align: left;
     position: absolute;
-    bottom: -32px;
+    bottom: -2rem;
     left: 0px;
     user-select: none;
     color: rgba(255, 255, 255, 0.671);
@@ -169,74 +169,74 @@ onKeyStroke(['ArrowRight', 'd'], () => {
 
 .score2 {
     font-family: 'consolas';
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: right;
     position: absolute;
-    bottom: 50px;
-    right: 0px;
+    bottom: 3.125rem;
+    right: 0rem;
     user-select: none;
     color: rgba(255, 255, 255, 0.671);
 }
 
 .text1 {
     font-family: 'Microsoft YaHei';
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: bold;
     text-align: left;
     position: absolute;
-    top: -8px;
-    left: 0px;
+    top: -0.5rem;
+    left: 0rem;
     user-select: none;
     color: rgba(255, 255, 255, 0.671);
 }
 
 .text2 {
     font-family: 'Microsoft YaHei';
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     text-align: right;
     position: absolute;
-    top: -2px;
-    right: 0px;
+    top: -0.125rem;
+    right: 0rem;
     user-select: none;
     color: rgba(255, 255, 255, 0.671);
 }
 
 .new-game {
-    width: 144px;
-    height: 50px;
-    border-radius: 25px;
+    width: 9rem;
+    height: 3.125rem;
+    border-radius: 1.5625rem;
     font-family: 'Microsoft Yahei';
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
-    padding: 4px;
+    padding: 0.25rem;
     background-color: white;
     color: black;
     border-color: black;
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0rem;
+    right: 0rem;
 }
 
 .continue {
-    width: 144px;
-    height: 50px;
-    border-radius: 25px;
+    width: 9rem;
+    height: 3.125rem;
+    border-radius: 1.5625rem;
     font-family: 'Microsoft Yahei';
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
-    padding: 4px;
+    padding: 0.25rem;
     background-color: white;
     color: black;
     border-color: black;
     position: relative;
-    top: 106px;
+    top: 6.625rem;
 }
 
 .mask-text {
     font-family: 'Microsoft Yahei';
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: bold;
     text-align: center;
     user-select: none;

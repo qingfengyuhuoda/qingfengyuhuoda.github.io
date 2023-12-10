@@ -9,7 +9,7 @@ const props = defineProps<{
     index:number
 }>()
 const top = computed(() => {
-    return `${144 * props.index}px`
+    return `${15+144 * props.index}px`
 })
 const prop_colors = {
         0:'#ff3584',
@@ -45,6 +45,7 @@ const prop_colors = {
     height: 128px;
     border-radius: 50%;
     position: absolute;
+    left:8px;
     display: flex;
     align-items: center;
     justify-content: center;

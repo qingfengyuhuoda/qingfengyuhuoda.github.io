@@ -34,29 +34,29 @@ const flatBoard = computed(() => {
 
 <style lang="scss" scoped>
 .background {
-    width: 560px;
-    height: 560px;
-    padding: 16px;
+    width: 35rem;
+    height: 35rem;
+    padding: 1rem;
     background-color: #bbada0;
     border-radius: 8px;
     display: grid;
-    grid-row-gap: 16px;
-    grid-column-gap: 16px;
-    grid-template-rows: repeat(4, 128px);
-    grid-template-columns: repeat(4, 128px);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    grid-template-rows: repeat(4, 8rem);
+    grid-template-columns: repeat(4, 8rem);
     position: absolute;
 
     .grid-cell {
-        width: 128px;
-        height: 128px;
-        border-radius: 8px;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 0.5rem;
         background-color: #ccc0b3;
     }
 }
 
 .container-board {
-    width: 592px;
-    height: 592px;
+    width: 37rem;
+    height: 37rem;
     position: absolute;
 }
 </style>

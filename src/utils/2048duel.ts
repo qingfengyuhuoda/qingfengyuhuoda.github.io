@@ -12,7 +12,7 @@ import { createRandom } from "./createRandom";
 let id = 0;
 const createId = () => (id += 1);
 
-export const MAX_HP = 1000;
+export const MAX_HP = 6000;
 
 export type Status = "normal" | "frozen" | "row" | "column" | "bomb" | "heal";
 type Tile = [number, number, Status] | null;

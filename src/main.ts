@@ -10,7 +10,12 @@ import elementPlus from './plugins/element-plus'
 // import axios from 'axios'
 // Vue.prototype.$http = axios
 import { createPinia } from 'pinia'
+import { setRem } from './utils/resize'
 
+const resize = () => setRem(656, 852)
+
+resize()
+window.addEventListener('resize', resize)
 router.beforeEach((to, from, next) => {
   
     const game = useuserStore()

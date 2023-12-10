@@ -57,7 +57,7 @@ const register = () => {
     // $refs.registerRef.value.validate(valid) => {
     //     if (valid) {
     // 验证通过
-    axios.post('http://localhost:9090/register', userData)
+    axios.post('http://101.200.36.91:9090/register', userData)
         .then(res => {
             if (res.data.code === '200') {
                 // router.push('/wcregister')
@@ -73,7 +73,11 @@ const register = () => {
         });
     //   }
 };
-
+const forget = () => {
+    
+                ElMessage({ dangerouslyUseHTMLString: true, message: '<strong style="color: green; font-size: 18px;">请联系管理员QQ:596863631</strong>', type: 'success' })
+    //   }
+};
 const login = () => {
     const userData = {
         username: user.value.username,
@@ -83,7 +87,7 @@ const login = () => {
     // $refs.registerRef.value.validate(valid) => {
     //     if (valid) {
     // 验证通过
-    axios.post('http://localhost:9090/login', userData)
+    axios.post('http://101.200.36.91:9090/login', userData)
         .then(res => {          
             console.log(res.data.data)
             if (res.data.code === '200') {
@@ -92,7 +96,7 @@ const login = () => {
                 console.log(game.highScore)
                 game.highScore=res.data.data.score
                 console.log(game.highScore)
-                router.push('/index')
+                router.push('/index.html')
                 ElMessage({ dangerouslyUseHTMLString: true, message: '<strong style="color: green; font-size: 18px;">登录成功</strong>', type: 'success' })
             } else {
                 ElMessage.error({ dangerouslyUseHTMLString: true, message: res.data.msg, type: 'error' })
@@ -109,7 +113,7 @@ const login = () => {
   <div class="main-profile ">
     <div  class="row">
     <el-row class="login-page">
-        <el-col :span="12" class="bg"><img src="src/assets/images/2048Tiles.png" alt="Your Image" /></el-col>
+        <el-col :span="12" class="bg"><img src="../assets/images/2048Tiles.png" alt="Your Image" /></el-col>
         <el-col :span="6" :offset="3" class="form">
             <!-- 注册表单 -->
             <el-form ref="form" size="large" autocomplete="off" v-if="isRegister" :model="user" :rules="rules">
@@ -154,7 +158,7 @@ const login = () => {
                 <el-form-item class="flex">
                     <div class="flex">
                         <el-checkbox>记住我</el-checkbox>
-                        <el-link type="primary" :underline="false">忘记密码？</el-link>
+                        <el-link type="primary" :underline="false" @click="forget">忘记密码？</el-link>
                     </div>
                 </el-form-item>
                 <!-- 登录按钮 -->

@@ -20,7 +20,7 @@ const quitnow = () => {
       <div class="main-profile ">
         <div class="row" v-if="!ifuser">
           <div class="col-lg-4">
-            <img class="custom-image" src="src/assets/images/2048logo_1.png" alt="" >
+            <img class="custom-image" src="../assets/images/2048logo_1.png" alt="" >
           </div>
           <div class="col-lg-4 align-self-center">
             <div class="main-info header-text">
@@ -48,7 +48,7 @@ const quitnow = () => {
         </div>
         <div class="row" v-else>
           <div class="col-lg-4">
-            <img class="custom-image" src="src/assets/images/2048logo_1.png" alt="" >
+            <img class="custom-image" src="../assets/images/2048logo_1.png" alt="" >
           </div>
           <div class="col-lg-4 align-self-center">
             <div class="main-info header-text">
@@ -56,7 +56,7 @@ const quitnow = () => {
               <br />
               <br />
               <span>Online</span>
-              <h4>Player</h4>
+              <h4>{{ authStore.info.username }}</h4>
               <div class="main-border-button" >
                 <router-link to="/index">Start Game</router-link>
               </div>

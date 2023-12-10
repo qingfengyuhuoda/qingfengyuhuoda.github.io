@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onKeyStroke,  useTransition } from '@vueuse/core'
+import { onKeyStroke} from '@vueuse/core'
 // import Scrim from './Scrim.vue'
 import Board from './Board.vue';
 import HealthPointBar from './HealthPointBar.vue';
@@ -148,6 +148,18 @@ onKeyStroke('1', () => {
     game.localGame.setTileProp(i, j, 'row' as Status)
 })
 
+onKeyStroke('z', () => {
+    const num = game.localGame.biggestTile[0]
+    const i = game.localGame.biggestTile[1]
+    const j = game.localGame.biggestTile[2]
+
+    if (num < 64) {
+        return
+    }
+    if(game.localGame.prop_num[0]<=0) return
+    game.localGame.prop_num[0]--
+    game.localGame.setTileProp(i, j, 'row' as Status)
+})
 onKeyStroke('2', () => {
     const num = game.localGame.biggestTile[0]
     const i = game.localGame.biggestTile[1]
@@ -161,7 +173,32 @@ onKeyStroke('2', () => {
     game.localGame.setTileProp(i, j, 'column' as Status)
 })
 
+onKeyStroke('x', () => {
+    const num = game.localGame.biggestTile[0]
+    const i = game.localGame.biggestTile[1]
+    const j = game.localGame.biggestTile[2]
+
+    if (num < 64) {
+        return
+    }
+    if(game.localGame.prop_num[1]<=0) return
+    game.localGame.prop_num[1]--
+    game.localGame.setTileProp(i, j, 'column' as Status)
+})
 onKeyStroke('3', () => {
+    const num = game.localGame.biggestTile[0]
+    const i = game.localGame.biggestTile[1]
+    const j = game.localGame.biggestTile[2]
+
+    if (num < 64) {
+        return
+    }
+    if(game.localGame.prop_num[2]<=0) return
+    game.localGame.prop_num[2]--
+    game.localGame.setTileProp(i, j, 'bomb' as Status)
+})
+
+onKeyStroke('q', () => {
     const num = game.localGame.biggestTile[0]
     const i = game.localGame.biggestTile[1]
     const j = game.localGame.biggestTile[2]
@@ -186,11 +223,23 @@ onKeyStroke('4', () => {
     game.localGame.prop_num[3]--
     game.localGame.setTileProp(i, j, 'heal' as Status)
 })
+onKeyStroke('e', () => {
+    const num = game.localGame.biggestTile[0]
+    const i = game.localGame.biggestTile[1]
+    const j = game.localGame.biggestTile[2]
 
+    if (num < 64) {
+        return
+    }
+    if(game.localGame.prop_num[3]<=0) return
+    game.localGame.prop_num[3]--
+    game.localGame.setTileProp(i, j, 'heal' as Status)
+})
 
 
 onKeyStroke('f', () => {
-    
+    if(game.localGame.prop_num[4]<=0) return
+    game.localGame.prop_num[4]--
     game.remoteGame.board = game.remoteGame.setRandomTile(game.remoteGame.board, 'frozen')
 
 })

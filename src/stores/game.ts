@@ -102,6 +102,7 @@ export const useGameStore = defineStore('game', () => {
     
         localGame,
         remoteGame,
+        isMultiplayerGameOpen,
     
         startNewGame,
     
@@ -111,7 +112,7 @@ export const useGameStore = defineStore('game', () => {
         joinMultiplayerGame,
         leaveMultiplayerGame,
     
-        link: computed(() => `${window.location.origin}\\battle?game=${peer.id}`),
+        link: computed(() => `${window.location.origin}\/battle?game=${peer.id}`),
     
         onRemotePlayerJoined: onRemotePlayerJoined.on,
         onRemotePlayerLeft: onRemotePlayerLeft.on,

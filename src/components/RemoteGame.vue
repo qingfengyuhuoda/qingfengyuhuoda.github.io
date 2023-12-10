@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import {  ref } from 'vue';
 import { useFireworks } from '../composables/useConfetti';
 // import CopyLink from './CopyLink.vue'
 import Button from './Button.vue'
@@ -14,7 +14,7 @@ import { MAX_HP } from '../utils/2048duel';
 import { useClipboard } from '@vueuse/core';
 
 const { play } = useFireworks()
-const { copy } = useClipboard()
+const { copy } = useClipboard({legacy:true})
 
 const game = useGameStore()
 const showWonState = ref(false)
@@ -34,6 +34,7 @@ const copyLink = () => {
     })
 }
 
+
 </script>
 
 <template>
@@ -48,12 +49,14 @@ const copyLink = () => {
                 <span>
                     Waiting for other player to connect...
                 </span>
+                
             </div>
             
-            <span style="z-index: 10; ">
+            <span v-if="game.isMultiplayerGameOpen" style="z-index: 10; ">
                 {{ game.link }}
+                <br>{{ "链接生成后，将此链接发送给你的好友，即可开始对战！" }}
             </span>
-            <button class="custom-button" @click="copyLink" style="z-index: 10;">复制</button>
+            <button v-if="game.isMultiplayerGameOpen" class="custom-button" @click="copyLink" style="z-index: 10;">复制</button>
             
         </Mask>
 

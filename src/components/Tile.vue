@@ -11,11 +11,11 @@ const props = defineProps<{
 }>()
 
 const top = computed(() => {
-    return `${16 + 144 * props.row}px`
+    return `${1 + 9 * props.row}rem`
 })
 
 const left = computed(() => {
-    return `${16 + 144 * props.col}px`
+    return `${1 + 9 * props.col}rem`
 })
 
 const z_index = computed(() => {
@@ -106,9 +106,9 @@ const tile_number_shadow_color = computed(() => {
 
 <style lang="scss" scoped>
 .tile {
-    width: 128px;
-    height: 128px;
-    border-radius: 8px;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.5rem;
     position: absolute;
     display: flex;
     align-items: center;

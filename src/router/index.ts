@@ -2,11 +2,14 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 // import axios from "axios";
 const routes: Array<RouteRecordRaw> = [{
     
+    path: '/index.html',
+    component: () => import('../components-view/index.vue'),
+    // meta: { requiresAuth: true } // 这个路由需要身份验证
+}, {
     path: '/index',
     component: () => import('../components-view/index.vue'),
     // meta: { requiresAuth: true } // 这个路由需要身份验证
 }, {
-
     path: '/',
     component: () => import('../components-view/index.vue')
 }, {
