@@ -143,6 +143,7 @@ const login = () => {
                     </el-link>
                 </el-form-item>
             </el-form>
+            
             <!-- 登录表单 -->
             <el-form ref="form" size="large" autocomplete="off" v-else :model="user" :rules="rules">
                 <el-form-item>

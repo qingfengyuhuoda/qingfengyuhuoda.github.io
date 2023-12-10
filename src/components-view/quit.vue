@@ -22,6 +22,7 @@ const quitnow = () => {
           <div class="col-lg-4">
             <img class="custom-image" src="../assets/images/2048logo_1.png" alt="" >
           </div>
+          
           <div class="col-lg-4 align-self-center">
             <div class="main-info header-text">
               <br />

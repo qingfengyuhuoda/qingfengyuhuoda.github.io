@@ -20,6 +20,7 @@ const authStore = useuserStore()
             <li><span v-if="authStore.info.achieve1"><div class="main-border-button "><a href="#">Finish</a></div></span>
                   <span v-else="authStore.info.achieve1"><div class="main-border-button border-no-active"><a href="#">Not Finish</a></div></span></li>
         </ul>
+        
         </div>
         <div class="item">
         <ul>
