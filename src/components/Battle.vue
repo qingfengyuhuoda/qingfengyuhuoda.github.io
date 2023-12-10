@@ -80,6 +80,7 @@ watch(()=>game.isRemotePlayerConnected,()=>{
     width: 50%;
 }
 
+
 .custom-button {
   
   font-size: 0.875rem;

@@ -11,6 +11,7 @@ export interface GameMessage {
     payload?: Record<string, string | number>
 }
 
+
 export const useGameStore = defineStore('game', () => {
     const peer = usePeerStore()
     const localGame = use2048Duel()

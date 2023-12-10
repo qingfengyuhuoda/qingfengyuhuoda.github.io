@@ -24,6 +24,7 @@ game.localGame.onWon(() => {
     showWonState.value = true
 })
 
+
 const copyLink = () => {
   copy(game.link)
     .then(() => {

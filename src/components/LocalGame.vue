@@ -17,6 +17,7 @@ const emit = defineEmits<{
   (e: 'update:seed'): string
 }>()
 
+
 // const board = ref<HTMLElement>()
 
 const { play } = useFireworks()
