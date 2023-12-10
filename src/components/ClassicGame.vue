@@ -155,6 +155,7 @@ onKeyStroke(['ArrowRight', 'd'], () => {
     position: relative;
 }
 
+
 .score1 {
     font-family: 'consolas';
     font-size: 5rem;

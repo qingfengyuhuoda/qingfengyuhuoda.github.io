@@ -11,4 +11,5 @@ defineProps<{
         }">
         <slot />
     </div>
+    
 </template>

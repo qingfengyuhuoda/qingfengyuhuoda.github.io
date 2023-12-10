@@ -19,6 +19,7 @@ const prop_colors = {
         4:'#35e9ff',
     }
 
+
 </script>
 
 <template>

@@ -200,4 +200,5 @@ export function use2048() {
         // onWon: onWonHook.on,
         // onMove: onMoveHook.on,
     }
+    
 }

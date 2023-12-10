@@ -34,6 +34,7 @@
     <!-- <PlayerChart></PlayerChart> -->
 </template>
 
+
 <style lang="scss" scoped>
 
 </style>

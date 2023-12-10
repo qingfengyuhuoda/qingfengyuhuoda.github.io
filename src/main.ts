@@ -30,6 +30,7 @@ router.beforeEach((to, from, next) => {
     }
   })
 
+  
 const app = createApp(App);
 // app.config.globalProperties.$EventBus = mitt();
     app.use(router).use(createPinia()).use(autoAnimatePlugin).use(elementPlus).mount('#app')
