@@ -39,6 +39,7 @@ const routes: Array<RouteRecordRaw> = [{
     path: '/register',
     component: () => import('../components-view/PlayerRegister.vue')
 
+    
 }, {
 //     path: '/login',
 //     component: () => import('../components-view/PlayerLogin.vue')
